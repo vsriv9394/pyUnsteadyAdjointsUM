@@ -7,7 +7,7 @@ npoints  = 65
 nsteps   = 30000
 opt_iter = 300
 
-beta = np.loadtxt("beta_%04d.dat"%(opt_iter))
+beta = np.loadtxt("beta_files/beta_%04d.dat"%(opt_iter))
 
 x,t = np.meshgrid(np.linspace(-1.,1.,65), np.linspace(0.,nsteps,nsteps+1))
 plt.contourf(x, t, np.reshape(beta, [30001, 65], order='C'), 50)

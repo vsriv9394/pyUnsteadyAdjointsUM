@@ -14,6 +14,9 @@
     > cd 2DHeatEqn_ForwardEuler_src
     > make
 
+3. Create a directory beta_files in the root folder of this repository and copy the
+   file beta_0300.dat to it to run everything readily.
+
 #########################################################################################
 				       USAGE
 #########################################################################################

@@ -4,14 +4,14 @@ from Heat2D_FE import *
 npoints = 65
 nsteps  = 30000
 
-start_opt       = 200
+start_opt       = 0
 end_opt         = 300
 opt_step_length = 0.5
 
 if start_opt==0:
     beta = np.ones((npoints*(nsteps+1)))
 else:
-    beta = np.loadtxt("beta_%04d.dat"%(start_opt))
+    beta = np.loadtxt("beta_files/beta_%04d.dat"%(start_opt))
 
 Eqn = LaplaceEquation(num_points=npoints,\
                       n_steps=nsteps,\

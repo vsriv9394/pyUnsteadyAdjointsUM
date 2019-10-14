@@ -36,13 +36,14 @@ void AdjointUpdate(int n,
 		last_adj_state[(n-3)*n+i] -= 1./3.*this_adj_state[(n-1)*n+i];
 	}	
 
-	for(i=1; i<n-1; i++)
-		for(j=1; j<n-1; j++){
+	for(j=1; j<n-1; j++){
+		for(i=1; i<n-1; i++){
 			last_adj_state[(j+1)*n+i] += F0 * this_adj_state[j*n+i];
 			last_adj_state[(j-1)*n+i] += F0 * this_adj_state[j*n+i];
 			last_adj_state[j*n+(i+1)] += F0 * this_adj_state[j*n+i];
 			last_adj_state[j*n+(i-1)] += F0 * this_adj_state[j*n+i];
 			last_adj_state[j*n+i] += (1.-4.*F0) * this_adj_state[j*n+i];
+		}
 	}
 
 }

@@ -1,0 +1,35 @@
+#########################################################################################
+                                    SETUP NOTES
+#########################################################################################
+
+1. Ensure that you have a python distribution (preferably python 3.7) and the following
+   packages installed:
+    - numpy
+    - scipy
+    - matplotlib
+    - ctypes
+
+2. Run the following to compile the C subroutines which are used from within the python
+   wrapper for increased speed
+    > cd 2DHeatEqn_ForwardEuler_src
+    > make
+
+#########################################################################################
+				       USAGE
+#########################################################################################
+
+The problem definition has been provided in the documentation directory.
+
+See the __init__ function in the file Heat2D_FE.py to see what parameters can be defined
+for the problem
+
+Before running any file please check that the parameters inside the file are set
+as needed to avoid unwanted errors.
+
+Functionality:
+
+Heat2D_FE.py  : Main driver file (can be used to run a test case)
+optimize.py   : Carries out the Field Inversion
+plotbeta.py   : Plots the designated beta field as a contour in the x-t plane
+validation.py : Runs a baseline and an inversion case given a designated beta file
+                and produces field contours and comparisons between sensor data.
